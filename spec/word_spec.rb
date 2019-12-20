@@ -18,13 +18,13 @@ describe 'Word' do
     describe '#update' do
         it 'updates the attributes of a Word' do
             @word1.update({word: 'Java'})
-            expect(@word1.word).to eq 'Java'
+            expect(@word1.word).to eq('Java')
         end
     end
     describe '#delete' do
         it 'removes a word from the list' do
             @word1.delete
-            expect(Word.all).to eq ([@word2, @word3])
+            expect(Word.all).to eq([@word2, @word3])
         end
     end
     describe '.all' do
