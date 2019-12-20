@@ -15,6 +15,12 @@ describe 'Word' do
             expect(Word.all).to include(word)
         end
     end
+    describe '#update' do
+        it 'updates the attributes of a Word' do
+            @word1.update({word: 'Java'})
+            expect(@word1.name).to eq 'Java'
+        end
+    end
     describe '.all' do
         it 'returns an array of all words' do
             expect(Word.all).to eq([@word1, @word2, @word3])
