@@ -18,7 +18,7 @@ describe 'Word' do
     describe '#update' do
         it 'updates the attributes of a Word' do
             @word1.update({word: 'Java'})
-            expect(@word1.name).to eq 'Java'
+            expect(@word1.word).to eq 'Java'
         end
     end
     describe '.all' do

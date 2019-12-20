@@ -7,6 +7,9 @@ class Word
 
         save
     end
+    def update (update_attributes)
+        @word = update_attributes[:word]
+    end
 
     #class methods
     @@words = {}
