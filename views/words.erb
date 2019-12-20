@@ -1,8 +1,16 @@
 <% if @words.any? %>
 <div id='cards'>
     <% @words.each do |word| %>
-    <div class="card">
-        <a href='/words/<%= word.id %>'><%= word.word %></a>
+    <div class='card'>
+        <div class='card-content'>
+            <div class='card-front'>
+                <!-- <a href='/words/<%= word.id %>'><%= word.word %></a> -->
+                <p>TEST1</p>
+            </div>
+            <div class='card-back'>
+                <p>TEST2</p>
+            </div>
+        </div>
     </div>
     <% end %>
 </div>
