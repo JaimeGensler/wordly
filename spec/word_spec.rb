@@ -10,14 +10,9 @@ describe 'Word' do
     end
 
     describe '#save' do
-        it 'saves the word' do
-            word = Word.new({word: 'Resting'}).send(:save)
+        it 'saves the word when initialized' do
+            word = Word.new({word: 'Resting'}) #save is run at the end of initialize
             expect(Word.all).to include(word)
-        end
-    end
-    describe '#initialize' do
-        it 'instantiates a new object with unique ID' do
-            expect(@word1.word).to eq('Coffee')
         end
     end
     describe '.all' do
