@@ -17,6 +17,19 @@ describe 'Definition' do
             expect(Definition.all).to include(def0)
         end
     end
+    describe '#update' do
+        it 'updates the attributes of a Word' do
+            @def1.update({definition: 'Some actions with a goal', part_of_speech: 'adjective'})
+            expect(@def1.definition).to eq('Some actions with a goal')
+        end
+    end
+    describe '#delete' do
+        it 'removes a word from the list' do
+            @def1.delete
+            expect(Definition.all).to eq([@word2, @word3])
+        end
+    end
+
     describe '.all' do
         it 'returns an array of all definitions' do
             expect(Definition.all).to eq([@def1, @def2, @def3])
