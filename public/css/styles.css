@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+#cards {
+    width: 85%;
+    height: 80%;
+    margin: 2rem auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+
+.card {
+    display: flex;
+    padding-top: 56.25%;
+    background-color: green;
+}
+
+.card a {
+
+}

@@ -1,0 +1,15 @@
+<% if @words.any? %>
+<div id='cards'>
+    <% @words.each do |word| %>
+    <div class="card">
+        <a href='/words/<%= word.id %>'><%= word.word %></a>
+    </div>
+    <% end %>
+</div>
+<% else %>
+<div id='cards-none'>
+    <p>It doesn't look like you've created any word cards yet!</p>
+    <p>You can make some here:</p>
+    <a href='/words/create'>Make Words!</a>
+</div>
+<% end %>

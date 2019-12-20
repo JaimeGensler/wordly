@@ -10,6 +10,8 @@ get '/' do
 end
 
 get '/words' do
+    word = Word.new({word: 'test'})
+    @words = Word.all
     erb :words
 end
 
