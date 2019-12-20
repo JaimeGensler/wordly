@@ -10,6 +10,9 @@ class Word
     def update (update_attributes)
         @word = update_attributes[:word]
     end
+    def delete
+        @@words.delete(@id)
+    end
 
     #class methods
     @@words = {}
