@@ -26,7 +26,7 @@ describe 'Definition' do
     describe '#delete' do
         it 'removes a word from the list' do
             @def1.delete
-            expect(Definition.all).to eq([@word2, @word3])
+            expect(Definition.all).to eq([@def2, @def3])
         end
     end
 

@@ -1,13 +1,20 @@
 class Definition
-    attr_accessor :def, :word_id
+    attr_accessor :definition, :word_id
     attr_reader :def_id
     def initialize (attributes)
         @definition = attributes[:definition]
         @part_of_speech = attributes[:part_of_speech]
         @word_id = attributes[:word_id]
         @def_id = (@@current_id += 1)
-
         save
+    end
+    def update(update_attributes)
+        @definition = update_attributes[:definition]
+        @part_of_speech = update_attributes[:part_of_speech]
+        @word_id = update_attributes[:word_id]
+    end
+    def delete
+        @@definitions.delete(@def_id)
     end
 
     #class methods

@@ -4,7 +4,6 @@ class Word
     def initialize (attributes)
         @word = attributes[:word]
         @id = (@@current_id += 1)
-
         save
     end
     def update (update_attributes)
