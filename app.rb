@@ -10,11 +10,16 @@ get '/' do
 end
 
 get '/words' do
-    word = Word.new({word: 'test'})
     @words = Word.all
     erb :words
 end
 
 get '/words/create' do
     erb :words_create
+end
+
+post '/words' do
+    Word.new(params)
+    Definition.new(params)
+    redirect to '/words'
 end

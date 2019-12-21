@@ -1,1 +1,18 @@
-<h1>Make new word</h1>
+<h1>Make a new word!</h1>
+
+<form action='/words' method='post'>
+    <label>
+        Word:
+        <input type='text' name='word' required>
+    </label>
+    <hr>
+    <label>
+        Definition:
+        <input type='text' name='definition'>
+    </label>
+    <label>
+        Part of Speech:
+        <input type='text' name='part_of_speech'>
+    </label>
+    <button type='submit'>Add Word!</button>
+</form>
