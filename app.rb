@@ -6,15 +6,18 @@ require './lib/definition'
 also_reload 'lib/**/*.rb'
 
 get '/' do
+    @page_name = 'Home'
     erb :home
 end
 
 get '/words' do
+    @page_name = 'Words'
     @words = Word.all
     erb :words
 end
 
 get '/words/create' do
+    @page_name = 'New Word'
     erb :words_create
 end
 

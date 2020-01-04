@@ -1,9 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: darkgrey;
-}
-
 #cards {
     width: 80%;
     height: 80%;
@@ -46,11 +40,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
     font-size: 3.5rem;
 }
 .card-back {
-    background-image: url('./../img/index_card.png');
+    background-image: url('./../img/card.png');
     background-size: cover;
     transform: rotateY(180deg);
 }

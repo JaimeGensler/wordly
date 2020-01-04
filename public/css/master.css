@@ -1,0 +1,6 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./../img/letters.jpg');
+    box-shadow: inset 0 0 0 100% rgba(0, 0, 255, 0.5);
+}
