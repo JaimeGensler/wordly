@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Wordly - <%= @page_name %></title>
-        <link rel='stylesheet' href='/css/master.css'>
-        <link rel='stylesheet' href="/css/<%= @page_name.downcase %>.css">
-        <link rel='icon' href='/img/icon.png'>
-    </head>
-    <body>
-        <%= yield %>
-    </body>
+<head>
+    <title>Wordly - <%= @page_name %></title>
+    <link rel='stylesheet' href='/css/master.css'>
+    <link rel='stylesheet' href=<%= "\'/css/#{@page_name.downcase}.css\'" %>>
+    <link rel='icon' href='/img/icon.png'>
+</head>
+<body>
+    <%= yield %>
+</body>
 </html>
