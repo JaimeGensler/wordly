@@ -22,12 +22,15 @@
     height: 100%;
 
     border: 2px solid black;
-    transition: transform 0.8s;
+    transition: transform 1s;
     transform-style: preserve-3d;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
 }
 .card:hover .card-content {
-    transform: rotateY(180deg);
+    transform: rotateY(15deg);
+}
+.card:visited .card-content {
+    transform: rotateY(150deg);
 }
 .card-front, .card-back {
     position: absolute;
