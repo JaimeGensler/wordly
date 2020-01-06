@@ -1,18 +1,19 @@
-<h1>Make a new word!</h1>
-
 <form action='/words' method='post'>
+    <h2>Make a new word!</h2>
     <label>
         Word:
-        <input type='text' name='word' required>
+        <input type='text' name='word' placeholder="e.g. 'magnaminous'" required>
     </label>
     <hr>
-    <label>
-        Definition:
-        <input type='text' name='definition'>
-    </label>
-    <label>
-        Part of Speech:
-        <input type='text' name='part_of_speech'>
-    </label>
+    <div id='def'>
+        <label>
+            Definition:
+            <input type='text' name='definition' placeholder="e.g. 'generous'">
+        </label>
+        <label>
+            Part of Speech:
+            <input type='text' name='part_of_speech' placeholder="e.g. 'adjective'">
+        </label>
+    </div>
     <button type='submit'>Add Word!</button>
 </form>

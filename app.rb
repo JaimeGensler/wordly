@@ -6,14 +6,13 @@ require './lib/definition'
 also_reload 'lib/**/*.rb'
 
 get '/' do
-    @page_name = 'Words'
-    @words = Word.all
-    erb :words
+    redirect to '/words'
 end
 
 get '/words' do
     @page_name = 'Words'
     @words = Word.all
+    @defs = Definition.all
     erb :words
 end
 
@@ -23,7 +22,12 @@ get '/words/new' do
 end
 
 post '/words' do
-    Word.new(params)
+    new_word = Word.new(params)
+    params[:word_id] = new_word.id
     Definition.new(params)
     redirect to '/words'
+end
+
+get '/words/:id' do
+    erb :words_ID
 end

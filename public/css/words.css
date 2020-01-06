@@ -68,11 +68,38 @@
 }
 .card-front {
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-family: 'Comic Sans MS', sans-serif;
 }
 .card-back {
     background-image: url('/img/card.png');
     background-size: contain;
     transform: rotateY(180deg);
+}
+.card-back h4 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.5rem 0 0 0;
+}
+.card-back p {
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+    font-style: italic;
+}
+.card-back a {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 50%;
+    border: 1px solid black;
+    background-color: #c9c9c9;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    margin: 2rem auto;
+    color: black;
 }
 .card-faces div {
     position: absolute;

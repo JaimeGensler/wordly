@@ -3,7 +3,7 @@
 <head>
     <title>Wordly - <%= @page_name %></title>
     <link rel='stylesheet' href='/css/master.css'>
-    <link rel='stylesheet' href=<%= "\'/css/#{@page_name.downcase}.css\'" %>>
+    <link rel='stylesheet' href=<%= "/css/#{@page_name.downcase.gsub(/\s+/, '')}.css" %>>
     <link rel='icon' href='/img/icon.png'>
 </head>
 <body>

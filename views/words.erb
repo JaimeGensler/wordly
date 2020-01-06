@@ -8,10 +8,12 @@
         <input type='checkbox' style='hidden'>
         <div class="card-faces">
             <div class='card-front'>
-                <h3><%= "Front" || word.word %></h3>
+                <h3><%= word.word %></h3>
             </div>
             <div class='card-back'>
-                <p>Back</p>
+                <h4><%= word.word %></h4>
+                <p><%= @defs.select{|elem| elem.word_id == word.id}[0].definition %></p>
+                <a href="/words/<%= word.id %>">Edit Word</a>
             </div>
         </div>
     </label>
@@ -22,6 +24,6 @@
 <div id='cards-none'>
     <p>It doesn't look like you've created any word cards yet!</p>
     <p>You can make some here:</p>
-    <a href='/words/create'>Make Words!</a>
+    <a href='/words/new'>Make Words!</a>
 </div>
 <% end %>

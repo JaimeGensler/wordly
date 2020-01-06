@@ -26,6 +26,9 @@ class Definition
     def self.clear
         @@definitions = {}
     end
+    def self.for(id)
+        @@definitions.values.select{|elem| elem.word_id == id}
+    end
 
     private
     def save
