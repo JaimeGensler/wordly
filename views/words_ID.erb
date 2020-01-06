@@ -1,0 +1,15 @@
+<div class='container'>
+    <h1><%= @word.word %></h1>
+    <% if @word_defs.any? %>
+    <ul>
+        <% @word_defs.each do |defin| %>
+        <li><a href="/words/<%= @word.id %>/definitions/<%= defin.def_id %>"> <%= defin.definition %> </a></li>
+        <% end %>
+    </ul>
+    <% else %>
+    <p>There are no definitions for this word yet!</p>
+    <% end %>
+
+    <br>
+    <a href="/words/<%= @word.id %>/edit">Edit/Delete Word</a>
+</div>

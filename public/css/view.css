@@ -1,0 +1,15 @@
+.container {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: white;
+}
+
+.container ul {
+    width: 50%;
+    margin: 0 auto;
+}
+.container a {
+    color: white;
+    text-align: left;
+    text-decoration: none;
+}

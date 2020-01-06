@@ -22,6 +22,9 @@ class Word
     def self.clear
         @@words = {}
     end
+    def self.search(id)
+        @@words[id]
+    end
 
     private
     def save
