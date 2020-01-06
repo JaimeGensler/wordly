@@ -19,13 +19,13 @@ GEM
     mini_portile2 (2.4.0)
     multi_json (1.14.1)
     mustermann (1.0.3)
-    nokogiri (1.10.7-x64-mingw32)
+    nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    public_suffix (4.0.1)
-    rack (2.0.8)
+    public_suffix (4.0.3)
+    rack (2.0.7)
     rack-protection (2.0.7)
       rack
     rack-test (1.1.0)
@@ -61,7 +61,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  x64-mingw32
+  ruby
 
 DEPENDENCIES
   capybara
@@ -71,4 +71,4 @@ DEPENDENCIES
   sinatra-contrib
 
 BUNDLED WITH
-   2.1.2
+   1.16.1
