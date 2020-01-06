@@ -11,5 +11,18 @@
     <% end %>
 
     <br>
+    <form action="/words/<%= @word.id %>/definitions" method="post">
+        <h3>Create Definition</h3>
+            <label>
+                Definition:
+                <input name="definition" type="text">
+            </label>
+            <label>
+                Part of Speech:
+                <input name="part_of_speech" type="text">
+            </label>
+        <button type="submit">Add Definition: </button>
+    </form>
+    <br>
     <a href="/words/<%= @word.id %>/edit">Edit/Delete Word</a>
 </div>

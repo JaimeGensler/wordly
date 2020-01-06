@@ -29,6 +29,18 @@ get '/words/:id/edit' do
     @word = Word.search(params[:id].to_i)
     erb :words_ID_edit
 end
+get '/words/:id/definitions/:def_id' do
+    @page_name = 'View'
+    @word = Word.search(params[:id].to_i)
+    @def = Definition.search(params[:def_id].to_i)
+    erb :words_ID_definitions_DEFID
+end
+get('/words/:id/definitions/:def_id/edit') do
+    @page_name = 'View'
+    @word = Word.search(params[:id].to_i)
+    @def = Definition.search(params[:def_id].to_i)
+    erb :words_ID_definitions_DEFID
+end
 
 
 post '/words' do
@@ -37,11 +49,18 @@ post '/words' do
     Definition.new(params)
     redirect to '/words'
 end
-patch('/words/:id') do
+patch '/words/:id' do
     Word.search(params[:id].to_i).update(params)
     redirect to "/words/#{params[:id]}"
 end
-delete('/words/:id') do
+delete '/words/:id' do
     Word.search(params[:id].to_i).delete
     redirect to '/words'
+end
+
+post('/words/:id/definitions') do
+    word_id = params[:id]
+    params[:word_id] = word_id.to_i
+    Definition.new(params)
+    redirect to "/words/#{params[:id]}"
 end

@@ -1,5 +1,5 @@
 class Definition
-    attr_accessor :definition, :word_id
+    attr_accessor :definition, :word_id, :part_of_speech
     attr_reader :def_id
     def initialize (attributes)
         @definition = attributes[:definition]
@@ -26,8 +26,11 @@ class Definition
     def self.clear
         @@definitions = {}
     end
-    def self.for(id)
-        @@definitions.values.select{|elem| elem.word_id == id}
+    def self.search(id)
+        @@definitions[id]
+    end
+    def self.for(search_id)
+        @@definitions.values.select{|elem| elem.word_id == search_id}
     end
 
     private

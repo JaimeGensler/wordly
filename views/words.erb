@@ -13,7 +13,11 @@
             </div>
             <div class='card-back'>
                 <h4><%= word.word %></h4>
-                <p><%= @defs.select{|elem| elem.word_id == word.id}[0].definition %></p>
+                <% if (@defs.select{|elem| elem.word_id == word.id}.length > 0) %>
+                <p> <%= @defs.select{|elem| elem.word_id == word.id}[0].definition %> </p>
+                <% else %>
+                <p>No definitions yet!</p>
+                <% end %>
                 <a href="/words/<%= word.id %>">Edit Word</a>
             </div>
         </div>
