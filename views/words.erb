@@ -1,8 +1,8 @@
 <% if @words.any? %>
 <div id='cards'>
-    <div>
-        
-    </div>
+    <a href='/words/new' id='add-word'>
+        <h3>+</h3>
+    </a>
     <% @words.each do |word| %>
     <label class='card'>
         <input type='checkbox' style='hidden'>
@@ -17,6 +17,7 @@
     </label>
     <% end %>
 </div>
+
 <% else %>
 <div id='cards-none'>
     <p>It doesn't look like you've created any word cards yet!</p>

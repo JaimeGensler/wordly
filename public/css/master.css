@@ -34,6 +34,7 @@ body {
     color: white;
     font-size: 4rem;
     font-weight: bold;
+    text-shadow: -1px -1px #2e2e2e, 1px -1px #2e2e2e, -1px 1px #2e2e2e, -1px -1px #2e2e2e;
 }
 
 #content {

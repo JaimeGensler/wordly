@@ -6,8 +6,9 @@ require './lib/definition'
 also_reload 'lib/**/*.rb'
 
 get '/' do
-    @page_name = 'Home'
-    erb :home
+    @page_name = 'Words'
+    @words = Word.all
+    erb :words
 end
 
 get '/words' do
@@ -16,9 +17,9 @@ get '/words' do
     erb :words
 end
 
-get '/words/create' do
+get '/words/new' do
     @page_name = 'New Word'
-    erb :words_create
+    erb :words_new
 end
 
 post '/words' do
