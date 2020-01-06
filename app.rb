@@ -35,7 +35,7 @@ get '/words/:id/definitions/:def_id' do
     @def = Definition.search(params[:def_id].to_i)
     erb :words_ID_definitions_DEFID
 end
-get('/words/:id/definitions/:def_id/edit') do
+get '/words/:id/definitions/:def_id/edit' do
     @page_name = 'View'
     @word = Word.search(params[:id].to_i)
     @def = Definition.search(params[:def_id].to_i)
@@ -45,8 +45,10 @@ end
 
 post '/words' do
     new_word = Word.new(params)
-    params[:word_id] = new_word.id
-    Definition.new(params)
+    unless (params[:word_id] = "")
+        params[:word_id] = new_word.id
+        Definition.new(params)
+    end
     redirect to '/words'
 end
 patch '/words/:id' do

@@ -1,28 +1,29 @@
 <div class='container'>
     <h1><%= @word.word %></h1>
     <% if @word_defs.any? %>
-    <ul>
-        <% @word_defs.each do |defin| %>
-        <li><a href="/words/<%= @word.id %>/definitions/<%= defin.def_id %>"> <%= defin.definition %> </a></li>
-        <% end %>
-    </ul>
+    <% @word_defs.each do |defin| %>
+    <a class='def' href="/words/<%= @word.id %>/definitions/<%= defin.def_id %>">
+        <span class='pos'><%= defin.part_of_speech || '???' %></span>
+        <%= defin.definition %>
+    </a>
+    <% end %>
     <% else %>
     <p>There are no definitions for this word yet!</p>
     <% end %>
 
-    <br>
+    <hr>
     <form action="/words/<%= @word.id %>/definitions" method="post">
         <h3>Create Definition</h3>
-            <label>
-                Definition:
-                <input name="definition" type="text">
-            </label>
-            <label>
-                Part of Speech:
-                <input name="part_of_speech" type="text">
-            </label>
+        <label>
+            Definition:
+            <input name="definition" type="text">
+        </label>
+        <label>
+            Part of Speech:
+            <input name="part_of_speech" type="text">
+        </label>
         <button type="submit">Add Definition: </button>
     </form>
-    <br>
-    <a href="/words/<%= @word.id %>/edit">Edit/Delete Word</a>
+    <hr>
+    <a class='edit' href="/words/<%= @word.id %>/edit">Edit/Delete Word</a>
 </div>
