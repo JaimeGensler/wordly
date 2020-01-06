@@ -1,10 +1,42 @@
+@keyframes slidingBackground{
+  from {background-position: 0 0;}
+  to {background-position: 626px 626px;}
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(80, 80, 200, 0.5);
+    background: url('/img/bg.jpg');
+    background-repeat: repeat;
+    animation: slidingBackground 60s linear infinite;
 }
 
-.container {
+#header {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 6rem;
+    width: 20rem;
+    border-radius: 5rem;
+
+    background-image: linear-gradient(to bottom right, #2e2e2e, #5e5e5e, #2e2e2e);
+    text-decoration: none;
+    box-shadow: 0px 0px 20px 5px #2e2e2e;
+}
+#header img {
+    height: 100%;
+    width: auto;
+}
+#header h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#content {
     width: 80%;
     margin: 0 auto;
 }
