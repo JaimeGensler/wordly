@@ -1,16 +1,17 @@
 <% if @words.any? %>
 <div id='cards'>
     <% @words.each do |word| %>
-    <div class='card'>
-        <div class='card-content'>
+    <label class='card'>
+        <input type='checkbox' style='hidden'>
+        <div class="card-faces">
             <div class='card-front'>
-                <h3><%= word.word %></h3>
+                <h3><%= "Front" || word.word %></h3>
             </div>
             <div class='card-back'>
-                <p>SAMPLE TEXT</p>
+                <p>Back</p>
             </div>
         </div>
-    </div>
+    </label>
     <% end %>
 </div>
 <% else %>

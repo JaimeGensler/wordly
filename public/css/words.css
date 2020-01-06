@@ -1,6 +1,4 @@
 #cards {
-    width: 80%;
-    height: 80%;
     margin: 2rem auto;
     padding: 0;
 
@@ -8,46 +6,45 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 3rem;
 }
-/* card flip animation based on w3 schools tutorial */
-.card {
-    padding-bottom: 60%;
 
-    width: 100%;
+/* card-flip logic */
+.card {
+    height: 15rem;
+    width: 25rem;
+}
+.card input {
+    display: none;
+}
+.card-faces {
     height: 100%;
+    width: 100%;
+    border: 2px solid black;
 
     perspective: 50rem;
-}
-.card-content {
-    width: 100%;
-    height: 100%;
-
-    border: 2px solid black;
-    transition: transform 1s;
+    transition: transform 750ms;
     transform-style: preserve-3d;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
 }
-.card:hover .card-content {
-    transform: rotateY(15deg);
+.card:hover .card-faces {
+    transform: rotateY(30deg);
+
 }
-.card:visited .card-content {
-    transform: rotateY(150deg);
+.card input:checked + .card-faces {
+    transform: rotateY(180deg);
 }
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+.card:hover input:checked + .card-faces {
+    transform: rotateY(210deg);
 }
 .card-front {
     background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Comic Sans MS", sans-serif;
-    font-size: 3.5rem;
 }
 .card-back {
-    background-image: url('./../img/card.png');
-    background-size: cover;
+    background-image: url('/img/card.png');
+    background-size: contain;
     transform: rotateY(180deg);
+}
+.card-faces div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: none;
 }
