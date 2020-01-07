@@ -1,7 +1,7 @@
 <div class='container'>
     <h1>Definition for <%= @word.word %>:</h1>
     <h3><%= @def.definition %></h3>
-    <h4>Part of Speech: <%= @def.part_of_speech %></h4>
+    <h4>Part of Speech: <span class='pos'><%= @def.part_of_speech %></span></h4>
 
-    <a href="/words/<%= @word.id %>/edit">Edit/Delete Definition</a>
+    <a class='edit' href="/words/<%= @word.id %>/edit">Edit/Delete Definition</a>
 </div>

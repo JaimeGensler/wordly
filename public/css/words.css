@@ -85,7 +85,10 @@
     margin: 0.5rem 0 0 0;
 }
 .card-back p {
-    margin: 1rem 0 0 0;
+    width: 90%;
+    text-indent: 1rem;
+    margin: 1rem auto;
+    line-height: 1.25rem;
     font-size: 1rem;
     font-style: italic;
 }
@@ -107,6 +110,3 @@
     height: 100%;
     backface-visibility: hidden;
 }
-/* .card:hover .card-faces div {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
-} */

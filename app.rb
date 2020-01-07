@@ -45,7 +45,7 @@ end
 
 post '/words' do
     new_word = Word.new(params)
-    unless (params[:word_id] = "")
+    unless (params[:definition].empty?)
         params[:word_id] = new_word.id
         Definition.new(params)
     end
