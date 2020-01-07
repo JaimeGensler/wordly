@@ -25,7 +25,7 @@
     color: white;
     font-style: italic;
 }
-.container .def:hover {
+.container a.def:hover {
     color: #ffbaba;
 }
 
@@ -42,4 +42,9 @@
 
 .container form {
     margin: 1rem;
+}
+
+.container label {
+    display: block;
+    margin: 0.5rem;
 }

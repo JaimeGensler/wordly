@@ -9,9 +9,14 @@ class Definition
         save
     end
     def update(update_attributes)
-        @definition = update_attributes[:definition]
-        @part_of_speech = update_attributes[:part_of_speech]
-        @word_id = update_attributes[:word_id]
+        update_attributes = update_attributes.reduce({}) do |acc, (key, val)|
+            acc[key.to_sym] = ((val == '') ? nil : val)
+            acc
+        end
+        @definition = update_attributes[:definition] || @definition
+        @part_of_speech = update_attributes[:part_of_speech] || @part_of_speech
+        @word_id = update_attributes[:word_id] || @word_id
+        self
     end
     def delete
         @@definitions.delete(@def_id)

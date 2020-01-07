@@ -6,6 +6,9 @@
     grid-gap: 3rem;
     grid-template-columns: 1fr 1fr;
 }
+#cards > * {
+    margin: 0 auto;
+}
 
 #add-word {
     display: flex;
@@ -85,10 +88,11 @@
     margin: 0.5rem 0 0 0;
 }
 .card-back p {
+    display: block;
     width: 90%;
     text-indent: 1rem;
-    margin: 1rem auto;
     line-height: 1.25rem;
+    margin: 1.1rem auto;
     font-size: 1rem;
     font-style: italic;
 }
