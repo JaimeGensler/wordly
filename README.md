@@ -18,12 +18,16 @@ _Wordly will allow you to input any word and create any number of definitions fo
 
 ## Setup/Installation Requirements
 
+#### Cloning:
 * _Clone this github repository_
 * _CD into the repository_
 * _Run 'gem install bundler'_
 * _Run 'bundle'_
 * _Run ruby app.rb_
 * _Enjoy!_
+
+#### Heroku
+* _Alternatively, check it out [here!](https://glacial-ocean-14730.herokuapp.com/words)
 
 
 ## Support and contact details
