@@ -27,7 +27,7 @@ _Wordly will allow you to input any word and create any number of definitions fo
 * _Enjoy!_
 
 #### Heroku
-* _Alternatively, check it out [here!](https://glacial-ocean-14730.herokuapp.com/words)
+* _Alternatively, check it out [here!](https://glacial-ocean-14730.herokuapp.com/words)_
 
 
 ## Support and contact details
