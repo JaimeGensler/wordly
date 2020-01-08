@@ -30,16 +30,18 @@ describe 'update a defition', {:type => :feature} do
         word = Word.new({word: 'Spaghetti'})
         definition = Definition.new({definition: 'Delicious', word_id: word.id})
         visit("/words/#{word.id}/definitions/#{definition.def_id}")
-        #TO DO
+        fill_in('definition', :with => 'Extremely tasty')
+        click_on('Update Definition')
+        expect(page).to have_content('Extremely tasty')
     end
 end
-#
-# describe 'delete a word path', {:type => :feature} do
-#     it 'deletes a word and redirects to all words page' do
-#         Word.clear
-#         word = Word.new({word: "Spaghetti"})
-#         visit("/words/#{word.id}/edit")
-#         click_on('Delete Word')
-#         expect(page).not_to have_content('Spaghetti')
-#     end
-# end
+
+describe 'delete a definition', {:type => :feature} do
+    it 'deletes a definition and redirects to word page' do
+        word = Word.new({word: 'Spaghetti'})
+        definition = Definition.new({definition: 'Delicious', word_id: word.id})
+        visit("/words/#{word.id}/definitions/#{definition.def_id}")
+        click_on('Delete Definition')
+        expect(page).not_to have_content('Delicious')
+    end
+end
