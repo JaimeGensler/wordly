@@ -41,3 +41,20 @@ body {
     width: 80%;
     margin: 0 auto;
 }
+
+.back {
+    display: block;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 1rem;
+    border: 1px solid black;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    width: 10rem;
+    text-align: center;
+    text-decoration: none;
+}
+.back:hover {
+    background-color: rgba(255, 0, 0, 0.75);
+}
